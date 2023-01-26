@@ -1,0 +1,45 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <math.h>
+
+int main(void)
+{
+    float l = 0, s = 0, w = 1;
+    string t = get_string("TEXT: ");
+
+    for (int i = 0, n = strlen(t); i < n; i++)
+    {
+        if(isalpha(t[i]))
+        {
+            l++;
+        }
+        else if(isspace(t[i]))
+        {
+            w++;
+        }
+        else if (t[i] == 33 || t[i] == 46 || t[i] == 63)
+        {
+            s++;
+        }
+    }
+
+    //aplc algth
+    float L = (l/w) * 100;
+    float S = (s/w) * 100;
+    int index = round(0.05888 * L - 0.296 * S - 15.8);
+
+    if(index <= 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    else if (index >= 16)
+    {
+        printf("Grade 16+\n");
+    }
+    else
+    {
+        printf("Grade: %i\n", index);
+    }
+}

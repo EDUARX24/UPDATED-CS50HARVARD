@@ -1,0 +1,11 @@
+sort1 uses: Bubble short
+
+How do you know?: Corre más rápido en la lista ordenada
+
+sort2 uses: Merge short
+
+How do you know?: más rápido en una lista aleatoria
+
+sort3 uses: Selection sort
+
+How do you know?: Era la unica opción disponible
