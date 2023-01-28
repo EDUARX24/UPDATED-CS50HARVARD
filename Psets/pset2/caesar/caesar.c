@@ -31,11 +31,11 @@ int main(int argc, string argv[])
           {
             if(isupper(p[i])) //validacion para abecedario en minuscula
             {
-                printf("%c", (p[i] - 65 + k) % 26 + 65);//implementacion de form & validacion de las minusculas
+                printf("%c", (p[i] - 'A' + k) % 26 + 'A');//implementacion de form & validacion de las minusculas
             }
             else if(islower(p[i]))//val de ltrs mayusculas
             {
-                printf("%c", (p[i] - 97 + k) % 26 + 97); //valis letras mayusculas
+                printf("%c", (p[i] - 'a' + k) % 26 + 'a'); //valis letras mayusculas
             }
             else
             {
